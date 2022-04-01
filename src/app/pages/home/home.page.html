@@ -23,12 +23,27 @@
   </ion-list>
 
   <app-pickup-call-card
-    [hasHeader]="true"
-    [hasFooter]="true"
-  ></app-pickup-call-card>
+    status="hold"
+    updateAt="25/04/2022 18:01"
+    createdAt="23/04/2022 15:09"
+    notes="We have 2 bags full, one with plastic and one with glass"
+  >
+    <ion-card-header header>
+      <ion-card-subtitle>Last pickup call</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-button
+      color="success"
+      fill="clear"
+      size="full"
+      footer
+      (click)="goToPickupCalls()"
+      >Vezi tot...</ion-button
+    >
+  </app-pickup-call-card>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="success">
+    <ion-fab-button color="success" (click)="newPickupCall()">
       <ion-icon icon="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

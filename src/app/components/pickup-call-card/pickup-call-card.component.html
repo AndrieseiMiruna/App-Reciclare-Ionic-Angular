@@ -1,7 +1,5 @@
 <ion-card>
-  <ion-card-header *ngIf="hasHeader">
-    <ion-card-subtitle>Last pickup call</ion-card-subtitle>
-  </ion-card-header>
+  <ng-content select="[header]"></ng-content>
 
   <ion-card-content>
     <ion-item lines="nones">
@@ -42,8 +40,6 @@
       <ion-label color="success"> {{ value }} lei</ion-label>
     </ion-item>
 
-    <ion-button *ngIf="hasFooter" color="success" fill="clear" size="full"
-      >Vezi tot...</ion-button
-    >
+    <ng-content select="[footer]"></ng-content>
   </ion-card-content>
 </ion-card>
